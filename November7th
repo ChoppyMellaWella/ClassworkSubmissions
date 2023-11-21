@@ -1,0 +1,41 @@
+
+/*
+ * The purpose of this code is to print numbers -4, 14, 32, 50, 68, and 86 using
+ * a for loop.
+ */
+
+public class SimpleLoop 
+{
+
+	public static void main(String[] args) 
+	{
+		//invoke a method that will print numbahs
+		countSomeNums();
+		
+
+	}
+
+	/*
+	 * This method will do what is commented in for the for loop
+	 */
+	
+	private static void countSomeNums() 
+	{
+		//declare and initialize a local variable "a" 
+		//the distance between all the numbers is 18 
+		int a = 18;
+		
+		//for our for loop, we declare an integer i and initialize it as 0
+		//then, for our conditional statement we check to see if i is 
+		//less than six. Once the condition is true, we increment i by 1 after
+		//the code block is finished running
+		for(int i = 0; i < 6; i++)
+		{
+			//print out the product of variables i and a then subtract by 4
+			System.out.println((i * a) - 4);
+			
+		}
+			
+	}
+
+}

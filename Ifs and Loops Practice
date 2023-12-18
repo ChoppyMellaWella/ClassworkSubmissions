@@ -1,0 +1,107 @@
+//import scanner
+import java.util.Scanner;
+
+/*
+ * this is an assignment using if statements and loops
+ */
+
+public class IfandLoops 
+{
+
+	public static void main(String[] args) 
+	{
+
+	//open the scanner
+	Scanner numCheck = new Scanner(System.in);
+	
+	//declare and initialize x and y as integers to whatever we put through
+	//the scanner
+	int x = numCheck.nextInt();
+	int y = numCheck.nextInt();
+
+	/*
+	 * this method will print out whether or not the arguments we pass through
+	 * the method are odd or even
+	 */
+	printEvenorOdd(x, y);
+	
+	/*
+	 * This method will use x number as a base and power it to our y value. 
+	 * Will print out something
+	 */
+	printExpTable(x, y);
+	
+	
+	/*
+	 * This method will get the factorial of a number
+	 */
+	getFact(x, y);
+	
+	//close the scanner
+	numCheck.close();
+		
+
+	}
+
+	private static void getFact(int x, int y) 
+	{
+
+		int work = 0;
+		
+		for(int i = 1; i <= x + 1; i++)
+		{
+			
+			
+		work = i * (i + 1);
+			
+			
+		}
+		System.out.println(work);
+	}
+
+	private static void printExpTable(int x, int y) 
+	{
+		
+		
+		
+		if(y < 0)
+		{
+			System.out.println("Sorry, I don't know how to do that yet.");
+		}
+		else for(int i = 0; i <= y; i++)
+		{
+			
+			System.out.println(x + " to the power of " + i + " is " + Math.pow(x, i));
+			
+		}
+		
+		
+		
+	}
+
+	private static void printEvenorOdd(int x, int y) 
+	{
+		//if statements for integers x
+		
+		if(x%2==0)
+		{
+			System.out.println(x + " is even");		
+		}
+		else
+		{
+			System.out.println(x + " is odd");
+		}
+		
+		//if statements for integer y
+		
+		if (y%2==0)
+		{
+			System.out.println(y + " is even");
+		}
+		else
+		{
+			System.out.println(y + " is odd");
+		}
+	}
+
+}

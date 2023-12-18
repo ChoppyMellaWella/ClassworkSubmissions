@@ -1,0 +1,59 @@
+
+/*
+ * In this class we are multiplying without using an asterisk
+ * 
+ */
+
+
+//import our scanner
+import java.util.Scanner;
+
+public class Multiplywithoutasterisk 
+{
+
+	public static void main(String[] args) 
+	{
+
+	//declare and initialize scanner
+	Scanner wow = new Scanner(System.in);
+		
+	//declare integers a, b and initialize values to whatever we type through the scanner
+		int a = wow.nextInt();
+		int b = wow.nextInt();
+	
+	//indication of what is going to be printed out: x multiplied by y
+	System.out.println("x * y");
+		
+	//print out the value the method doMultiply gives when passing arguments a and
+	/*
+	 * For this method we'll be using a for loop. We will start at 0 and add x to
+	 * itself y amount of times
+	 */
+	System.out.println(doMultiply(a, b));
+	
+	//close the scanner
+	wow.close();	
+		
+	}
+
+
+	
+	public static int doMultiply(int x, int y)
+	{
+	
+		//declare and initialize startNum with value of 0 our starting point
+		int startNum = 0;
+	
+		for(int i = 0; i < y; i++)
+		{
+			
+			startNum += x;
+			
+		}
+		
+		return  startNum;
+		
+	}
+	
+	
+}

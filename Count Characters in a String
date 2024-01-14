@@ -1,0 +1,69 @@
+
+	//Task
+
+//Create a method with two formal parameters: a String object and a char. 
+//Call this method "countChars." This method should count how many times 
+//the char shows up in the String and return that number.
+
+//For example, if you pass the method "AAAqAqAA" and "q," the method should 
+//return "2."
+
+	//Other examples:
+
+//"AQQQAABHQ" and "A" ---> returns "3"
+
+//"BBBB" and "Q" ---> returns "0"
+
+package theplace;
+
+public class Count_Strings_for_School 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		//instantiate a "name" object and assign as Axolotl
+		String name = "Axolotl";
+		
+		//declare a char, initialize identifier "myChar" to "l"
+		char myChar = 'l';
+				
+		/*
+		 * This method will use the letter you pass through it and will return 
+		 * the number of times the letter appears in the word
+		 * Arguments name and myChar
+		 */
+		System.out.println(countChars(name, myChar));
+		
+	}
+
+	private static int countChars(String x, char y) 
+	{
+
+		//we will be using this "total" variable to store the amount
+		//of times the letter we pass through this method appears in 
+		//our word
+		int total = 0;
+
+		
+		//in this for loop, we check each letter in our word for the
+		//"target" letter
+		for(int i = 0; i < x.length(); i++)
+		{
+			
+			//if the letter at "this" index is the same as our 
+			//letter, increment total by one
+			if(x.charAt(i) == y)
+			{
+				
+				total++;
+				
+			}
+						
+		}
+		
+		return total;
+		
+	}
+
+}

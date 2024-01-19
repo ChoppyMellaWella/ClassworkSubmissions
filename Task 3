@@ -1,0 +1,54 @@
+//import  in a scanner
+import java.util.Scanner;
+
+public class Task_3 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		//instantiate a scanner  called numcheck
+		Scanner numcheck = new Scanner(System.in);
+		
+		//instantiate a string using the user's input. Scanner will
+		//read input
+		String diceroll = numcheck.next();
+		
+		/*
+		 * Method should print out sum of two numbers separated by letter
+		 * "d". 
+		 * For example, 4d3. The sum of 4 and 3 is 7, so method will print
+		 * 7 
+		 */
+		doAdd(diceroll);
+		
+		//close scanner
+		numcheck.close();
+		
+	}
+
+	public static void doAdd(String diceroll) 
+	{
+
+		//declare an integer with the value initialized to the numerical
+		//position of the letter "d"
+		int dLine = diceroll.indexOf("d");
+		
+		//get the first and second numbers using the substring functionality
+		//thank you dLine, you saved us
+		String firstnum = diceroll.substring(0,dLine);
+		String secondnum = diceroll.substring(dLine+1);
+		
+		//convert the first and second numbers from String values into
+		//integers
+		int x = Integer.valueOf(firstnum);
+		int y = Integer.valueOf(secondnum);
+		
+		//print sum
+		System.out.print("The first number is " + x
+		+ " and the second number is " + y + "." 
+		+ " The sum of those two numbers is 7 " + (x+y));
+		
+	}
+
+}

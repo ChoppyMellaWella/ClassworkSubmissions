@@ -1,0 +1,78 @@
+
+	//import scanner
+	import java.util.Scanner;
+
+public class Roll_Dice 
+{
+
+	public static void main(String[] args) 
+	{
+		//instantiate scanner
+		Scanner dicenum = new Scanner(System.in);
+		
+		//give dice roll amount and dice face count separated by letter d
+		//will prompt user to do so
+		System.out.println("Roll a dice however many times you want to roll it"
+				+ " and indicate the amount of faces it has.");
+		System.out.println("Separate each number with the letter d");
+		System.out.println("So for example, 4d6 will roll a a 6-sided dice"
+				+ " 4 times.");
+	
+		//create a string using the user's input
+		String num = dicenum.next();
+		
+		/*
+		 * method will "roll" dice with x faces, y amount of times and
+		 * print out the sum
+		 */
+		rollDice(num);
+		
+		//close scanner
+		dicenum.close();
+		
+	}
+
+	private static void rollDice(String num) 
+	{
+
+		//find the numerical position or "index" of the letter d
+		//within the string you input
+		int dLine = num.indexOf("d");
+		
+		//find the first number before the "d"
+		//and the last number after the "d"
+		//these two numbers will determine how many times the dice will be 
+		//rolled and how many faces the dice will have
+		String first = num.substring(0,dLine);
+		String last = num.substring(dLine+1);
+		
+		//convert each first and last number from a String into an integer
+		int x = Integer.valueOf(first);
+		int y = Integer.valueOf(last);
+		
+		//serves as a "holder" for a roll number
+		int z = 0;
+		
+		//the value of the sum will be assigned to this identifier
+		int sum = 0;
+		
+		for(int i = 1; i<=x; i++)
+		{
+			
+			//get the roll
+			z = (int)(Math.random()*y)+1;
+			
+			//print out and indicate the roll and roll number
+			System.out.println("Roll" + " " + i + ":" + " " + z);
+			
+			//add the roll to the current value of sum
+			sum += z;
+						
+		}
+		
+		//print out the sum of the rolls for the last line of this method
+		System.out.println("The sum of your rolls is " + sum);
+		
+	}
+
+}

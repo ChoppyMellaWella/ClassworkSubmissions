@@ -1,0 +1,67 @@
+
+/**
+ * 	This class is just a student. With name, grades, and each individual
+ * 	grade
+ * 
+ * 	He probably goes to a Catholic school seeing that he has a Theology grade
+ * 
+ */
+public class Student 
+{
+
+	//give this class its properties/data attributes
+	private double science;
+	private double math;
+	private double theo;
+	private int gradeLevel = 12;
+	private String name = new String("Matthias");
+	 
+	/**
+	 * 
+	 * This constructor will set initial values to science, math, and 
+	 * theology grades at time of instantiation.
+	 * 
+	 * @param s science
+	 * @param m math
+	 * @param t theology
+	 */
+	public Student(double s, double m, double t)
+	{
+		//reassign to whatever we pass through here
+		science = s;
+		math = m;
+		theo = t;
+		
+	}
+	
+	/**
+	 *  
+	 *  This functionality only calculates the average of
+	 *  three numbers. 
+	 *  
+	 *  It'll be accessed only when introduceSelf() is invoked
+	 *  
+	 * @return
+	 */
+	private double getGPA()
+	{
+		
+		return (science + math + theo)/3;
+			
+	}
+	
+	/**
+	 * 
+	 * This functionality will introduce  the student, giving their name,
+	 * grade, and average GPA
+	 * 
+	 */
+	public void introduceSelf()
+	{
+		
+		System.out.println("I am a student in " + gradeLevel + ". My "
+				+ "name is " + name + ". My average GPA is " + getGPA());
+		
+	}
+
+}

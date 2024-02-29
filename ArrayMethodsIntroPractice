@@ -1,0 +1,115 @@
+
+//class assignment today folks
+
+package theplace;
+
+
+public class ArrayMethodsIntroPractice 
+{
+
+	public static void main(String[] args) 
+	{
+
+		
+		
+		//TASK 1:
+		
+		
+		//instantiate an array and have the identifier as evenNums
+		//we do be initializing them with even numberrs brooo
+			//even even even even even
+		int[] evenNums = {14, 16, 18, 20, 22, 24};
+		
+		//we declare int and initialize with any num bro 
+		//... lets make the identifier numbro
+		int numbro = 3;
+			//yea thats pretty cool	:sunglasses:
+		
+		//invoke this method divideElementByTwo man
+		//but makes sure we pass some values in there. A-A-Arguments?! 
+		
+		//Remember: arrays cannot be local... At least within Java... so any
+		//changes to elements made in this function will affect our "actual"
+		//array
+		
+		//First, I'll print out all elements within this array before
+		//it is passed through
+		
+		System.out.println(evenNums[0] + " " + evenNums[1] + " " +
+		evenNums[2] + " " + evenNums[3] + " " + evenNums[4] + " " + evenNums[5]);
+		
+		//invocationnnnnnnnnnn
+		divideElementByTwo(evenNums, numbro);
+		
+		//print the n'th element out now buddy
+		System.out.println(evenNums[numbro]);
+		
+		
+		
+		//TASK 2:
+		
+		
+		//so in this second task, we're going to use the same array in the
+		//first task
+		
+		//just invoke this second method
+		//but this time, we are going to nest this method into a newly
+		//created array WOAHHHHH
+		
+		int[] newarr = giveFirstAndLastArray(evenNums);
+		
+		//print out both the first and last elements of this new array :D
+		System.out.println(newarr[0] + " " + newarr[1]);
+		
+		
+	}
+
+	/**
+	 * 
+	 * Alright my bebes here's what this method will be doing for us
+	 * today (brings paper close to face)
+	 * 
+	 * "... after passed an array, it will return an array 
+	 * consisting of ONLY the first and last two elements."
+	 * 
+	 * Alright, lets get to work
+	 * 
+	 * @param arr = evenNums
+	 * @return
+	 */
+	
+	private static int[] giveFirstAndLastArray(int[] arr) 
+	{
+		//instantiate a new "local" array and have its elements
+		//be the first and last elements of our passed array
+		int[] localarr = {arr[0], arr[arr.length-1]};
+				
+		//return this new ones bebe
+		return localarr;
+	}
+
+
+	/**
+	 * 
+	 * Okay, so this method will uhhhh (looks closely)
+	 * 
+	 * "...after passing an int array arr and an int n, will change 
+	 * arr such that its n'th element is divided by two."
+	 * 
+	 * Alright, seems cool :thumbs_up:
+	 * 
+	 * @param arr = evenNums
+	 * @param n = numbro
+	 * @return
+	 */
+	private static int[] divideElementByTwo(int[] arr, int n) 
+	{
+		
+		//reassign n'th element to its divided buddy
+		arr[n] = arr[n]/2;
+		
+		//return the array back over to main
+		return arr;
+	}
+	
+}

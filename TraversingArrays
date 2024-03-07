@@ -1,0 +1,81 @@
+
+public class TraverseArrayClasswork 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		//declare a new array of doubles for this classwork
+		double[] arr = { 2.4, 5.5, 6.4 };
+		
+		//pass the same array through the method
+		System.out.println(sumArrElements( arr ));
+		
+		//now for this new task we need to make an array of integers
+		int[] anotherArr = { 4, 6, 3, 7, 9, 8 };
+		
+		
+		//pass the array through this method which will change every other element 
+		//to one
+		makeEveryOtherOne( anotherArr );
+		
+	}
+
+	
+	/**
+	 * This method will make every other element in the array 1
+	 * @param anotherArr
+	 */
+	public static void makeEveryOtherOne( int[] anotherArr ) 
+	{
+
+		
+		//traverse the array using counter variable
+		for(int counter = 0; counter < anotherArr.length; counter++)
+		{
+			
+			//will check that if a number is even, will be 0. If not zero, change to 
+			//one
+			if(counter%2 != 0)
+			{
+				
+				anotherArr[counter] = 1;
+				
+			}
+			
+			//print out each element
+			System.out.println(anotherArr[counter]);
+			
+		}
+		
+		
+		
+	}
+
+	/**
+	 * This method will get the sum of all the double within the array
+	 * @param arr
+	 * @return
+	 */
+	public static double sumArrElements( double[] arr )
+	{
+		//countahhh
+		int counter = 0;
+		
+		//summmm
+		double sum = 0;
+		
+		//for loop each iteration add to total value of sum
+		for(; counter < arr.length; counter++)
+		{
+			
+			sum += arr[counter];
+			
+		}
+		
+		//return sum to main
+		return sum;
+		
+	}
+
+}

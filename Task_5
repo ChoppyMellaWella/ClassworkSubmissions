@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class Task_5 
+{
+
+	public static void main(String[] args) 
+	{
+
+		Scanner stringchecker = new Scanner(System.in);
+	
+		System.out.println("Type out any string. I will "
+				+ "get rid of any spaces and mush it all together!");
+		
+		String str = stringchecker.nextLine();
+		
+		spaceNo(str);
+		
+		System.out.println(togetherness(str));
+		
+		stringchecker.close();
+		
+	}
+
+	public static String togetherness(String str) 
+	{
+
+		int num = spaceNo(str);
+	
+		String x;
+		
+		for(int i = 0; i<num; i++)
+		{
+			
+			x = str.substring(str.indexOf(' ') + 1);
+		
+			str = str.substring(0, str.indexOf(' '));
+			
+			str = str.concat(x);
+			
+			
+		}
+		
+		return str;
+		
+		
+	}
+
+	public static int spaceNo(String str) 
+	{
+	
+		int count = 0;
+		
+		for(int i = 0; i<str.length(); i++)
+		{
+			
+			if(str.charAt(i) == ' ')
+			{
+				
+				count++;
+				
+			}
+			
+		}
+			
+		return count;
+		
+	}
+
+}

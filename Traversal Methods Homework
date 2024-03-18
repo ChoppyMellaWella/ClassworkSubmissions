@@ -1,0 +1,224 @@
+
+//Today's task
+
+/**
+ * Complete the following problems with this precondition: all arrays will be 
+ * at least length 1. 
+
+1. Make a method that is passed an int array and returns the highest 
+value in that array.
+
+Ex: { 2, 6, 3, 9, 1, 1, 4} ---> returns 9
+
+2. Make a method that is passed an array of doubles and returns a 
+double array consisting of their average. 
+
+Ex: { 3.1, 4.2, 5.0, 6.2, 6.9} --> returns 5.08
+
+3. Make a method that is passed an int array and returns whether 
+or not the array has any even numbers in it.
+
+Ex: { 1, 6, 9} --> returns true
+
+Ex: { 1, 5, 7} --> returns false
+
+4. Make a method that is passed an int array and returns whether or not 
+the array has ALL even numbers in it.
+
+Ex: { 1, 6, 9} --> returns false
+
+Ex: { 4, 2, 18} --> returns true
+
+5. Make a method that is passed a double array and returns whether or 
+not three consecutive doubles of the same value appear in the array.
+
+Ex: { 2.0, 8.8, 8.8, 8.8, 9.0, 3.1} --> returns true
+
+Ex: {3.1, 7.1, 6.6, 9.3} --> returns false
+
+Precondition: the array will always be at least length three.
+ */
+
+public class Traversal_Methods_Homework 
+{
+
+	public static void main(String[] args) 
+	{
+		
+	//Problem 1:	
+		
+		//declare an array of integers
+		int[] intArray = { 20, 3, 17, 9, 10, 15, 18};
+		
+		//print out whatever comes out from the method
+		System.out.println(getHighest(intArray));
+		
+	//Problem 2:
+		double[] doubArray = { 3.1, 4.2, 5.0, 6.2, 6.9};
+		
+		System.out.println(getAvg(doubArray));
+		
+	//Problem 3:
+		
+		//declare an array initialized full of integers
+		int[] evenNums = { 1, 1, 3};
+		
+		//print out what is returned in the getEven Method
+		System.out.println(getEven(evenNums));
+		
+	//Problem 4:
+		
+		
+		int[] moreEvenNums = {2, 2, 8, 12, 16};
+		
+		//print out the result
+		System.out.println(getAllEvens(moreEvenNums));
+		
+	//Problem 5:
+		
+		double[] moreArr = { 2.0, 8.8, 8.8, 8.8, 9.0, 3.1};
+		
+		
+		System.out.println(getConsec(moreArr));
+		
+	}
+	
+	public static boolean getConsec(double[] arr) 
+	{
+		
+		
+		for(int i = 0; i < arr.length-2; i++)	
+		{
+			
+			if(arr[i] == arr[ i + 1] && arr[i] == arr[ i + 2 ])
+			{
+				
+				return true;
+				
+			}
+			
+		}
+		
+		
+		return false;	
+		
+	}
+
+	/**
+	 * 
+	 * @param moreEvenNums
+	 * @return
+	 */
+	
+	public static boolean getAllEvens(int[] moreEvenNums) 
+	{
+
+		int sum = 0;
+		
+		for(int elmnt: moreEvenNums)
+		{
+			
+			sum += elmnt;
+			
+		}
+		
+		if(sum%2 == 0)
+		{
+			
+			return true;
+			
+		}
+		else
+		{
+			
+			return false;
+			
+		}
+		
+	}
+
+	/**
+	 * 
+	 * @param evenNums
+	 * @return
+	 */
+
+	public static boolean getEven(int[] evenNums) 
+	{
+		
+		for(int elmnt: evenNums)
+		{
+			
+			if(elmnt%2 == 0)
+			{
+				
+				return true;
+				
+			}
+			
+		}
+		
+		return false;
+		
+	}
+
+	/**
+	 * 
+	 * @param doubArray
+	 * @return
+	 */
+	public static double getAvg(double[] doubArray) 
+	{
+
+		double sum = 0;
+		
+		for(double elmnt: doubArray)
+		{
+			
+			sum += elmnt;
+			
+		}
+		
+		return sum/doubArray.length;
+		
+	}
+
+	/**
+	 * 
+	 * @param intArray
+	 * @return
+	 */
+	
+	public static int getHighest(int[] intArray) 
+	{
+		//first num
+		int x = 0;
+		//previous num ( to be used )
+		int y = 0;
+
+		for(int i  = 0; i<intArray.length; i++ )
+		{
+			
+			x = intArray[i];
+			
+			if(y>x)
+			{
+				
+				x = y;
+				
+			}
+			else
+			{
+				
+				y = x;
+			
+			}
+			
+		}
+		
+		//return whatever x is in the end
+		return x;
+		
+	}
+
+}

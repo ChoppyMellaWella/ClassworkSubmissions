@@ -1,0 +1,123 @@
+
+public class BubbleSorter 
+{
+
+	public static void main(String[] args) 
+	{
+
+		
+		int[] randomNumbers = makeRandom();
+		
+		int[] yes = bubbleSort(randomNumbers);
+
+		printArr(yes);
+		
+		
+	}
+	
+	/**
+	 * 
+	 * This simply prints all the indices within the array
+	 * 
+	 * @param yes
+	 */
+	public static void printArr(int[] yes) 
+	{
+
+		for(int i = 0; i < yes.length; i++)
+		{
+			
+			System.out.println(yes[i]);
+			
+		}
+		
+	}
+
+
+	/**
+	 * 
+	 * This method sorts out all the elements within an array from smalleset to
+	 * biggest
+	 * 
+	 * @param nums
+	 * @return
+	 */
+	public static int[] bubbleSort(int[] nums) 
+	{
+	
+	
+		//traverses the array
+		for(int j = 0; j< nums.length; j++)
+		{
+		
+			for(int i = 0; i<nums.length-1; i++)
+			{
+				//if the int at index i > i+1, swap them
+				if(nums[i]>nums[i+1])
+				{
+				
+					int x = nums[i];
+					nums[i] = nums[i + 1];
+					nums[i+1] = x;
+				
+				}
+			
+			}
+		
+		}
+		
+		//new array with 2000 ints
+		int[] arr = new int[2000];
+		
+		//traverses the array
+		for(int i = 0; i<nums.length; i++)
+		{
+			//reassigns all indices with passed new array stuffs
+			arr[i] = nums[i];
+			
+		}
+		
+		//return new array
+		return arr;
+		
+	}
+
+
+	/**
+	 * 
+	 * This method will return a new array with a bunch of random numbers. 
+	 * The new array will have 2000 indices.
+	 * 
+	 * @return
+	 */
+	public static int[] makeRandom() 
+	{
+		
+		//declare an array of ints called bigNums. We'll be initializing it with
+		//2000 zeroes
+		int[] bigNums = new int[2000];
+		
+		//declare an int and initialize it with the length of our local array.
+		//Which in this case should be 2000
+		int len = bigNums.length;
+		
+		//within this for loop, we will be getting the random values using
+		//the Math.random functionality. 
+		for (int i = 0; i < len; i++)
+		{
+			//declare an integer that will get a random number in decimal form
+			//we then multiply the number by a thousand to get it into the ones place
+			//then we add one
+			int randomNumber = (int) ((Math.random() * 1000) + 1);
+			
+			//we then assign the random value to the current iteration
+			bigNums[i] = randomNumber;
+			
+		}
+		
+		//return bigNums
+		return bigNums;
+		
+	}
+
+}

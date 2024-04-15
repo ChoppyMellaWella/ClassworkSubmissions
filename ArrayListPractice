@@ -1,0 +1,59 @@
+
+
+//import arraylist
+import java.util.ArrayList;
+
+public class ArrayListMethodsInDepth
+
+{
+
+	public static void main(String[] args) 
+	{
+
+		//instantiate an array list called pastries.
+		ArrayList<String> pastries = new ArrayList<String>();
+		
+		//add pastries/foods into here
+		pastries.add("Apples");
+		
+		pastries.add("Bread");
+		
+		pastries.add("Cookies");
+		
+//		Task 1: Print out the length of the foods ArrayList
+		
+		//returns the length/size of our arraylist
+		System.out.println(pastries.size());
+		
+//		Task 2: Inside of a print statement, add the String "Dole Whip" 
+//		to foods. In the line comment for this code, state what it prints.
+		
+		//the add functionality of an array list has an additional function. it returns
+		//a boolean  value of true. not sure why, but it just does. don't question it,
+		//you'll just get more confused
+		
+		//returns true
+		System.out.println(pastries.add("Dole Whip"));
+		
+//		Task 3: Inside of a print statement, use the .set(E) method 
+//		to change "Bread" in foods to "Butter". Comment what it prints
+		
+		//this returns what used to be
+		System.out.println(pastries.set(1, "Butter"));
+		
+//		Task 4: Inside of a print statement, use the .remove(int) method 
+//		to remove "Cookies" from foods. Comment what it prints
+		
+		//remove returns the element that is to be removed
+		System.out.println(pastries.remove(2));
+
+//		Task 5: For each task, go back and comment 
+//		what the method you are calling does, and what 
+//		the method returns (both in general and in this case)
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,100 @@
+
+//importation of array lists and collections
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ArrayListSorters 
+{
+
+	public static void main(String[] args) 
+	{
+
+		
+//		Task 1: In the main method, instantiate two ArrayLists nums 
+//		and names of Integers (remember ints wouldn't work for ArrayLists) 
+//		and Strings respectively. Fill them with five unsorted values 
+//		(nums out of numerical order and names out of alphabetical order)
+		
+		//instant  this guy
+		ArrayList<Integer> gpa = new ArrayList<Integer>();
+		
+		//instant this guy
+		ArrayList<String> chess = new ArrayList<String>();
+		
+		//add all of these numbozos to our array lists
+		gpa.add(2);
+		
+		gpa.add(1);
+		
+		gpa.add(4);
+		
+		gpa.add(5);
+		
+		gpa.add(3);
+		
+		chess.add("Queen");
+		
+		chess.add("Pawn");
+		
+		chess.add("Bishop");
+		
+		chess.add("Knight");
+		
+		chess.add("Rook");
+		
+//		Task 2: Create a void method bubbleSortNumbers that is passed
+//		an ArrayList and bubble sorts it just like we did for arrays
+		
+		//print out our unsorted arraylist
+		System.out.println("Unsorted: " + gpa);
+		
+		//invoke  method that will return our sorted arraylist
+		bubbleSortNumbers(gpa);
+		
+		//print out our sorted arraylist
+		System.out.println("Sorted: " + gpa);
+		
+		//space
+		System.out.println();
+		
+//		Task 3: Create a void method bubbleSortStrings that is passed 
+//		an ArrayList and bubble sorts it into alphabetical order
+		
+		//print out our unsorted arraylist
+		System.out.println("Unsorted: " + chess);
+		
+		//invoke  method that will return our sorted arraylist
+		bubbleSortStrings(chess);
+		
+		//print out our sorted arraylist
+		System.out.println("Sorted: " + chess);
+		
+
+	}
+
+	/**
+	 * method will sort chess arraylist
+	 * @param chess
+	 */
+	public static void bubbleSortStrings(ArrayList<String> chess) 
+	{
+
+		//use Collection class's sort functionality to rearrange our 
+		//values in alphabetical order
+		Collections.sort(chess);
+		
+	}
+	/**
+	 * method  will sort gpa arraylist
+	 * @param gpa
+	 */
+	public static void bubbleSortNumbers(ArrayList<Integer> gpa) 
+	{
+
+		//use Collection class's sort functionality to rearrange our 
+		//values in numerical order (smallest to biggest)
+		 Collections.sort(gpa);
+		
+	}
+
+}

@@ -1,0 +1,110 @@
+
+public class TwoDArrayTraversal 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		//TASK 1:
+		
+		String[][] names = new String[7][6];
+		
+		
+		//TASK 2:
+		names[0][0]= "A";
+		names[0][1]= "B";
+		names[0][2]= "C";
+		names[0][3]= "D";
+		names[0][4]= "E";
+		names[0][5]= "F";
+		
+		names[1][0]= "a";
+		names[1][1]= "b";
+		names[1][2]= "c";
+		names[1][3]= "d";
+		names[1][4]= "e";
+		names[1][5]= "f";
+		
+		names[2][0]= "q";
+		names[2][1]= "w";
+		names[2][2]= "e";
+		names[2][3]= "r";
+		names[2][4]= "t";
+		names[2][5]= "y";
+		
+		names[3][0]= "Q";
+		names[3][1]= "W";
+		names[3][2]= "E";
+		names[3][3]= "R";
+		names[3][4]= "T";
+		names[3][5]= "Y";
+		
+		names[4][0]= "A";
+		names[4][1]= "B";
+		names[4][2]= "C";
+		names[4][3]= "D";
+		names[4][4]= "E";
+		names[4][5]= "F";
+		
+		names[5][0]= "f";
+		names[5][1]= "e";
+		names[5][2]= "d";
+		names[5][3]= "c";
+		names[5][4]= "b";
+		names[5][5]= "a";
+		
+		names[6][0]= "F";
+		names[6][1]= "E";
+		names[6][2]= "D";
+		names[6][3]= "C";
+		names[6][4]= "B";
+		names[6][5]= "A";
+		
+		//TASK 2 and 3:
+		System.out.println("All elements of the first column: ");
+		System.out.println();
+		
+		for(int i = 0; i <= names.length - 1; i++)
+		{
+			
+			System.out.println(names[i][0]);
+			
+		}
+		
+		System.out.println();
+		
+		//TASK 4 and 5:
+		System.out.println("All elements of the first row:");
+		System.out.println();
+		
+		for(int j = 0; j <= names[0].length - 1; j++)
+		{
+			
+			System.out.println(names[0][j]);
+			
+		}
+		
+		
+		//TASK 6:
+		System.out.println();
+		System.out.println("All elements within the entire 2D array");
+		System.out.println();
+		
+		
+		for(int i = 0; i <= names.length - 1; i++)
+		{
+			
+			for(int j = 0; j <= names[0].length - 1; j++)
+			{
+				
+				System.out.println(names[i][j]);
+				
+			}
+			
+			System.out.println();
+			
+		}
+		
+	}
+
+}
